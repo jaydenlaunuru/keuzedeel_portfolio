@@ -481,7 +481,6 @@ footer {
     }
 }
 
-/* Vaardigheden section */
 #vaardigheden {
   background: linear-gradient(135deg, rgba(44, 62, 80, 0.05), rgba(52, 152, 219, 0.05));
   padding: 4rem 2rem;
@@ -593,7 +592,6 @@ footer {
   transform: translateY(0);
 }
 
-/* Skill level indicators */
 .vaardigheden li::after {
   content: '';
   position: absolute;
@@ -635,7 +633,6 @@ footer {
   }
 }
 
-/* Opleiding & Ervaring box styling */
 .opleiding-ervaring {
   background: white;
   border-radius: 15px;
