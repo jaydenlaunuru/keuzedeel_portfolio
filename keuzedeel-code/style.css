@@ -65,7 +65,7 @@ main {
 
 section {
     padding: 4rem 2rem;
-    margin: 2rem 0;
+    margin: 7rem 0;
     background: white;
     border-radius: 8px;
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
@@ -261,10 +261,36 @@ aside.vaardigheden li:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+#projecten::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(to right, #2c3e50, #3498db);
 }
 
 #projecten h2 {
     margin-bottom: 4rem;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+#projecten h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(to right, #2c3e50, #3498db);
+    border-radius: 2px;
 }
 
 .project {
