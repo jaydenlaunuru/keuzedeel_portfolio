@@ -1,0 +1,867 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f6fa;
+}
+
+header {
+    background: linear-gradient(135deg, #2c3e50, #3498db);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+header .ondertitel {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+header nav {
+    margin-top: 2rem;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+header nav ul a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+header nav ul a:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+section {
+    padding: 4rem 2rem;
+    margin: 7rem 0;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    color: #2c3e50;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: 2rem;
+}
+
+#over-mij {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 0;
+    background: linear-gradient(135deg, rgba(44, 62, 80, 0.05), rgba(52, 152, 219, 0.05));
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+#over-mij::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(to right, #2c3e50, #3498db);
+}
+
+#over-mij h2 {
+    margin-bottom: 2rem;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+#over-mij h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(to right, #2c3e50, #3498db);
+    border-radius: 2px;
+}
+
+#over-mij p {
+    margin-bottom: 4rem;
+    position: relative;
+    z-index: 1;
+}
+
+.over-mij-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.over-mij-content p {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 2rem auto;
+}
+
+.over-mij-content .vaardigheden ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.over-mij-content .vaardigheden ul li {
+    background: #3498db;
+    color: white;
+    padding: 0.8rem;
+    border-radius: 8px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.over-mij-content .vaardigheden ul li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.vaardigheden {
+    width: 100%;
+    max-width: 700px;
+    margin: 2rem auto;
+    text-align: center;
+}
+
+.vaardigheden p {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.vaardigheden h3 {
+    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    color: #2c3e50;
+    text-align: center;
+}
+
+.vaardigheden ul {
+    justify-content: center;
+    max-width: 600px;
+    margin: 1.5rem auto;
+}
+
+aside.vaardigheden {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 800px;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(44, 62, 80, 0.1);
+}
+
+aside.vaardigheden:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+aside.vaardigheden h3 {
+    color: #2c3e50;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+aside.vaardigheden h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(to right, #2c3e50, #3498db);
+    border-radius: 2px;
+}
+
+aside.vaardigheden ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 1rem;
+    background: white;
+    border-radius: 8px;
+}
+
+aside.vaardigheden li {
+    background: linear-gradient(135deg, #2c3e50, #3498db);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+aside.vaardigheden li:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+#projecten {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+#projecten::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(to right, #2c3e50, #3498db);
+}
+
+#projecten h2 {
+    margin-bottom: 4rem;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+#projecten h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(to right, #2c3e50, #3498db);
+    border-radius: 2px;
+}
+
+.project {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    transition: all 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.project img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.project h3 {
+    color: #2c3e50;
+    padding: 1.5rem 1.5rem 0.5rem;
+    font-size: 1.5rem;
+}
+
+.project p {
+    padding: 0 1.5rem 1.5rem;
+    color: #333;
+}
+
+address {
+    text-align: center;
+    font-style: normal;
+}
+
+address a {
+    color: #3498db;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+address a:hover {
+    color: #2c3e50;
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: #2c3e50;
+    color: white;
+    margin-top: 4rem;
+}
+
+@media (min-width: 768px) {
+    .over-mij-content {
+        grid-template-columns: 2fr 1fr;
+    }
+}
+
+#contact {
+    position: relative;
+    margin: 4rem auto;
+    max-width: 1000px;
+    border: 2px solid #2c3e50;
+    background: linear-gradient(to right, #2c3e50, #3498db);
+    padding: 2rem;
+    border-radius: 4rem;
+}
+
+#contact::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(to right, #2c3e50, #3498db);
+    border-radius: 2px;
+}
+
+#contact h2 {
+    margin-bottom: 1rem;
+    color: white;
+}
+
+#contact p {
+    margin-bottom: 1rem;
+    color: white;
+}
+
+#contact address {
+    position: relative;
+    z-index: 1;
+}
+
+#contact address p {
+    position: relative;
+    padding: 1rem;
+    margin: 1.5rem 0;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#contact address p span {
+    font-weight: 500;
+    min-width: 80px;
+    text-align: right;
+}
+
+#contact address a {
+    position: relative;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    display: inline-block;
+    overflow: hidden;
+}
+
+#contact address a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: white;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+#contact address a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+#contact address a:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+@media (max-width: 768px) {
+    .vaardigheden ul {
+        gap: 1rem;
+    }
+    
+    #contact {
+        padding: 2rem 1rem;
+        margin: 2rem auto;
+    }
+
+    #over-mij {
+        padding: 2rem 1rem;
+    }
+
+    .vaardigheden p {
+        padding: 1.5rem;
+    }
+
+    aside.vaardigheden li {
+        padding: 0.6rem 1.2rem;
+    }
+
+    #contact address {
+        padding: 1.5rem;
+    }
+
+    #contact address p {
+        font-size: 1rem;
+        padding: 0.8rem;
+    }
+
+    #contact address a {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+    }
+}
+
+#vaardigheden {
+  background: linear-gradient(135deg, rgba(44, 62, 80, 0.05), rgba(52, 152, 219, 0.05));
+  padding: 4rem 2rem;
+  margin: 2rem 0;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+#vaardigheden::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(to right, #2c3e50, #3498db);
+}
+
+#vaardigheden::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><rect width="1" height="1" fill="rgba(44, 62, 80, 0.05)"/></svg>');
+  opacity: 0.5;
+}
+
+#vaardigheden h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #2c3e50;
+  position: relative;
+  padding-bottom: 1rem;
+  font-size: 2.5rem;
+}
+
+#vaardigheden h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(to right, #2c3e50, #3498db);
+  border-radius: 2px;
+}
+
+.vaardigheden {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.vaardigheden:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.vaardigheden ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 0;
+}
+
+.vaardigheden li {
+  background: linear-gradient(135deg, #2c3e50, #3498db);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 25px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.vaardigheden li::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.vaardigheden li:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.vaardigheden li:hover::before {
+  transform: translateY(0);
+}
+
+.vaardigheden li::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.5);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.vaardigheden li:hover::after {
+  transform: scaleX(1);
+}
+
+@media (max-width: 768px) {
+  #vaardigheden {
+    padding: 2rem 1rem;
+  }
+
+  #vaardigheden h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .vaardigheden {
+    padding: 1.5rem;
+  }
+
+  .vaardigheden li {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .vaardigheden ul {
+    gap: 1rem;
+  }
+}
+
+.opleiding-ervaring {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 800px;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(44, 62, 80, 0.1);
+}
+
+.opleiding-ervaring:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.opleiding-ervaring h3 {
+  color: #2c3e50;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.opleiding-ervaring h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(to right, #2c3e50, #3498db);
+  border-radius: 2px;
+}
+
+.opleiding-ervaring table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.opleiding-ervaring th,
+.opleiding-ervaring td {
+  padding: 0.8rem;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.opleiding-ervaring th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.opleiding-ervaring tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.opleiding-ervaring ul {
+  list-style: disc;
+  margin-left: 1.5rem;
+  padding: 0;
+}
+
+.opleiding-ervaring ul li {
+  margin-bottom: 0.5rem;
+}
+
+.opleiding-ervaring p {
+  color: #333;
+  line-height: 1.6;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  #vaardigheden {
+    padding: 2rem 1rem;
+  }
+
+  #vaardigheden h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .vaardigheden {
+    padding: 1.5rem;
+  }
+
+  .vaardigheden li {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .vaardigheden ul {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 1rem;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header .ondertitel {
+        font-size: 1rem;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    header nav ul a {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 0.8rem;
+    }
+
+    main {
+        padding: 1rem;
+    }
+
+    section {
+        padding: 2rem 1rem;
+        margin: 3rem 0;
+    }
+
+    section h2 {
+        font-size: 1.8rem;
+    }
+
+    .over-mij-content {
+        padding: 1rem;
+    }
+
+    .over-mij-content p {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+
+    .project {
+        flex-direction: column;
+    }
+
+    .project img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 1rem;
+    }
+
+    .project h3 {
+        font-size: 1.5rem;
+    }
+
+    .project p {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+
+    .opleiding-ervaring table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+        font-size: 0.9rem;
+    }
+
+    .opleiding-ervaring th,
+    .opleiding-ervaring td {
+        padding: 0.5rem;
+    }
+
+    aside.vaardigheden {
+        padding: 1rem;
+    }
+
+    aside.vaardigheden ul {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    aside.vaardigheden li {
+        width: 100%;
+        padding: 0.8rem;
+    }
+
+    #contact address {
+        padding: 1rem;
+    }
+
+    #contact address p {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    #contact address a {
+        font-size: 1rem;
+        padding: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    .over-mij-content p {
+        font-size: 0.95rem;
+    }
+
+    .project h3 {
+        font-size: 1.3rem;
+    }
+
+    .project p {
+        font-size: 0.95rem;
+    }
+
+    aside.vaardigheden li {
+        font-size: 0.9rem;
+    }
+}
